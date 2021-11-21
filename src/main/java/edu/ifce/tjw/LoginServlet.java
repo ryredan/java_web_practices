@@ -21,7 +21,7 @@ public class LoginServlet extends HttpServlet {
 
 		if (nomeUsuario.equals("admin") && senhaUsuario.equals("123")){
 			request.getSession().setAttribute("usuario", nomeUsuario);
-			response.sendRedirect("email.jsp");
+			response.sendRedirect("PagMail");
 		}else{
 			RequestDispatcher dispatcher = request.getRequestDispatcher("formlogin.html");
 			dispatcher.forward(request, response);
